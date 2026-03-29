@@ -13,7 +13,7 @@ export default function App() {
         'Construimos landing pages y experiencias web rápidas, escalables y responsive con foco en performance y resultados.',
     },
     {
-      title: 'Producto Digital',
+      title: 'Desarrolo de Aplicaciones',
       description:
         'Unimos estrategia, diseño y desarrollo para transformar ideas en productos listos para crecer.',
     },
@@ -60,7 +60,7 @@ export default function App() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <div>
             <span className="text-sm font-medium tracking-[0.22em] text-white/70 uppercase">
-              Your Agency
+              Polaris
             </span>
           </div>
           <nav className="hidden gap-8 text-sm text-white/70 md:flex">
@@ -87,96 +87,47 @@ export default function App() {
       </header>
 
       <main className="relative">
-        <section className="mx-auto grid max-w-7xl items-center gap-14 px-6 pb-20 pt-24 lg:grid-cols-2 lg:px-8 lg:pb-28 lg:pt-28">
-          <div>
-            <div className="mb-6 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-              UX/UI + Desarrollo Full Stack
-            </div>
-            <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-              Diseñamos y desarrollamos experiencias digitales que se ven
-              <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
-                modernas
-              </span>
-              . Y convierten.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
-              Somos una dupla de UX/UI y desarrollo full stack. Creamos landing pages,
-              sitios y productos digitales con estética premium, performance real y foco en negocio.
-            </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#contact"
-                className="rounded-full bg-white px-6 py-3 text-center text-sm font-semibold text-neutral-950 transition hover:scale-[1.02]"
-              >
-                Quiero presentar mi proyecto
-              </a>
-              <a
-                href="#work"
-                className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Ver cómo trabajamos
-              </a>
-            </div>
-            <div className="mt-10 grid max-w-xl grid-cols-3 gap-6 border-t border-white/10 pt-8 text-sm">
-              <div>
-                <div className="text-2xl font-semibold">UX</div>
-                <div className="mt-1 text-white/60">Diseño centrado en usuario</div>
-              </div>
-              <div>
-                <div className="text-2xl font-semibold">Dev</div>
-                <div className="mt-1 text-white/60">Implementación moderna</div>
-              </div>
-              <div>
-                <div className="text-2xl font-semibold">Impacto</div>
-                <div className="mt-1 text-white/60">Claridad y conversión</div>
-              </div>
-            </div>
-          </div>
+  <section className="mx-auto flex max-w-7xl justify-center px-6 pb-20 pt-24 lg:px-8 lg:pb-28 lg:pt-28">
+    <div className="mx-auto max-w-3xl text-center">
+      
+      <div className="mb-6 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+        UX/UI + Desarrollo Full Stack
+      </div>
 
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-fuchsia-500/20 via-violet-500/10 to-cyan-500/20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur-xl">
-              <div className="rounded-[1.5rem] border border-white/10 bg-neutral-900/90 p-4">
-                <div className="mb-4 flex items-center gap-2">
-                  <span className="h-3 w-3 rounded-full bg-red-400/80" />
-                  <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
-                  <span className="h-3 w-3 rounded-full bg-green-400/80" />
-                </div>
-                <div className="grid gap-4">
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6">
-                    <div className="text-xs uppercase tracking-[0.2em] text-white/50">Proyecto digital</div>
-                    <div className="mt-3 text-2xl font-semibold">Landing page premium</div>
-                    <div className="mt-2 max-w-md text-sm leading-6 text-white/65">
-                      Diseño limpio, narrativa clara, velocidad de carga y estructura orientada a conversión.
-                    </div>
-                    <div className="mt-6 h-2 w-32 rounded-full bg-gradient-to-r from-fuchsia-400 to-cyan-400" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <div className="text-sm text-white/50">Stack</div>
-                      <div className="mt-2 text-lg font-medium">Next.js + Tailwind</div>
-                    </div>
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <div className="text-sm text-white/50">Enfoque</div>
-                      <div className="mt-2 text-lg font-medium">Diseño + negocio</div>
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-sm text-white/50">Ideal para</div>
-                        <div className="mt-2 text-lg font-medium">Startups, servicios, marcas digitales</div>
-                      </div>
-                      <div className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">
-                        Alto impacto visual
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <h1 className="mx-auto max-w-3xl text-5xl font-semibold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+        Somos Polaris.
+      </h1>
+
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
+        Agencia de desarrollo de software que diseña y construye productos digitales.
+      </p>
+
+      <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a
+          href="#contact"
+          className="rounded-full bg-white px-6 py-3 text-center text-sm font-semibold text-neutral-950 transition hover:scale-[1.02]"
+        >
+          Comenzar proyecto
+        </a>
+      </div>
+
+      <div className="mx-auto mt-10 grid max-w-xl grid-cols-3 gap-6 border-t border-white/10 pt-8 text-center text-sm">
+        <div>
+          <div className="text-2xl font-semibold">Claridad</div>
+          <div className="mt-1 text-white/60">Diseño centrado en usuario</div>
+        </div>
+        <div>
+          <div className="text-2xl font-semibold">Performance</div>
+          <div className="mt-1 text-white/60">Implementación moderna</div>
+        </div>
+        <div>
+          <div className="text-2xl font-semibold">Crecimientos</div>
+          <div className="mt-1 text-white/60">Resultados que escalan</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
           <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 md:grid-cols-4">
@@ -189,13 +140,13 @@ export default function App() {
         </section>
 
         <section id="services" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div className="max-w-2xl">
+          <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm uppercase tracking-[0.24em] text-white/45">Servicios</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Lo que hacemos para que tu marca se vea seria, actual y profesional.
+              ¿Tu negocio está listo para da el siguiente paso digital?
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
             {services.map((service) => (
               <div
                 key={service.title}
@@ -233,32 +184,6 @@ export default function App() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section id="work" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-sm uppercase tracking-[0.24em] text-white/45">Proyectos</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Ejemplos del tipo de presencia digital que podemos construir.
-              </h2>
-            </div>
-            <a href="#contact" className="text-sm text-white/70 transition hover:text-white">
-              Empezar un proyecto →
-            </a>
-          </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {projects.map((project) => (
-              <div key={project.name} className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.04]">
-                <div className="h-52 bg-[linear-gradient(135deg,rgba(217,70,239,0.22),rgba(6,182,212,0.18),rgba(255,255,255,0.04))]" />
-                <div className="p-6">
-                  <div className="text-sm text-white/45">{project.type}</div>
-                  <h3 className="mt-2 text-xl font-semibold">{project.name}</h3>
-                  <p className="mt-4 text-sm leading-7 text-white/65">{project.summary}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </section>
 
