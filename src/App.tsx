@@ -341,7 +341,7 @@ export default function App() {
             {lang === 'es' ? '¿Tenés un proyecto en mente?' : 'Got a project in mind?'}
             <p className="mt-4 text-white/70">{lang === 'es' ? 'Contanos tu idea. Respondemos en menos de 24 horas.' : 'Tell us your idea. We respond in less than 24 hours.'}</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <a href="polaris.studio3031@gmail.com" className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/20">{lang === 'es' ? 'Enviar email' : 'Send email'}</a>
+              <a href="mailto:polaris.studio3031@gmail.com" className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/20">{lang === 'es' ? 'Enviar email' : 'Send email'}</a>
               <a href="https://wa.me/+5491166734266" className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/20">{lang === 'es' ? 'Abrir Whatsapp' : 'Open Whatsapp'}</a>
             </div>
           </div>
@@ -350,7 +350,7 @@ export default function App() {
       <footer className="border-t border-white/10 px-6 py-8">
   <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-white/40 sm:flex-row">
     <span className="font-medium tracking-[0.2em] uppercase text-white/60">Polaris</span>
-    <span>{lang === 'es' ? '© 2025 Polaris Agency. Todos los derechos reservados.' : '© 2025 Polaris Agency. All rights reserved.'}</span>
+    <span>{lang === 'es' ? '© 2026 Polaris Agency. Todos los derechos reservados.' : '© 2025 Polaris Agency. All rights reserved.'}</span>
     <div className="flex gap-6">
       <a href="#services" className="transition hover:text-white">
         {lang === 'es' ? 'Servicios' : 'Services'}
