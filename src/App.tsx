@@ -234,7 +234,7 @@ export default function App() {
             <p className="text-center text-xs uppercase tracking-[0.24em] text-white/30 mb-8">
               {lang === 'es' ? 'Tecnologías que usamos' : 'Technologies we use'}
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
+            <div className="flex flex-wrap justify-center items-center gap-8">
               {[
                 { name: 'React', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
                 { name: 'Figma', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
@@ -247,7 +247,7 @@ export default function App() {
                   <img
                     src={tech.src}
                     alt={tech.name}
-                    className="h-10 w-10 grayscale group-hover:grayscale-0 transition duration-300"
+                    className="h-10 w-10 transition duration-300 group-hover:scale-125"
                   />
                   <span className="text-xs text-white/30 group-hover:text-white/60 transition">
                     {tech.name}
