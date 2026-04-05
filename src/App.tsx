@@ -12,7 +12,7 @@ export default function App() {
   }, [])
   
 
-  
+  const [projectType, setProjectType] = useState('')
   const services = [
   {
     title: lang === 'es' ? 'UX/UI Design' : 'UX/UI Design',
@@ -333,35 +333,124 @@ export default function App() {
     </section>
 
         <section id="contact" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center ">
-            <p className="text-sm uppercase tracking-[0.24em] text-white/45">{lang === 'es' ? 'Contacto' : 'Contact'}</p>
-            {lang === 'es' ? '¿Tenés un proyecto en mente?' : 'Got a project in mind?'}
-            <p className="mt-4 text-white/70">{lang === 'es' ? 'Contanos tu idea. Respondemos en menos de 24 horas.' : 'Tell us your idea. We respond in less than 24 hours.'}</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <a href="mailto:polaris.studio3031@gmail.com" className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/20">{lang === 'es' ? 'Enviar email' : 'Send email'}</a>
-              <a href="https://wa.me/+5491166734266" className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/20">{lang === 'es' ? 'Abrir Whatsapp' : 'Open Whatsapp'}</a>
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-12">
+            <div className="mx-auto max-w-2xl text-center mb-10">
+              <p className="text-sm uppercase tracking-[0.24em] text-white/45">{lang === 'es' ? 'Contacto' : 'Contact'}</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+                {lang === 'es' ? '¿Tenés un proyecto en mente?' : 'Got a project in mind?'}
+              </h2>
+              <p className="mt-4 text-white/70">
+                {lang === 'es' ? 'Contanos tu idea. Respondemos en menos de 24 horas.' : 'Tell us your idea. We respond in less than 24 hours.'}
+              </p>
             </div>
-          </div>
-        </section>
+
+            <form
+  action="https://formspree.io/f/mvzvdzgw"
+  method="POST"
+  className="mx-auto max-w-2xl"
+>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+    <div className="flex flex-col gap-2">
+      <label className="text-xs text-white/50 uppercase tracking-widest">
+        {lang === 'es' ? 'Nombre' : 'Name'}
+      </label>
+      <input
+        type="text"
+        name="name"
+        required
+        placeholder={lang === 'es' ? 'Tu nombre' : 'Your name'}
+        className="rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-white/30 transition"
+      />
+    </div>
+
+    <div className="flex flex-col gap-2">
+      <label className="text-xs text-white/50 uppercase tracking-widest">
+        Email
+      </label>
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder={lang === 'es' ? 'tu@email.com' : 'your@email.com'}
+        className="rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-white/30 transition"
+      />
+    </div>
+  </div>
+
+  <div className="flex flex-col gap-2 mb-4 w-full">
+    <label className="text-xs text-white/50 uppercase tracking-widest">
+      {lang === 'es' ? 'Tipo de proyecto' : 'Project type'}
+    </label>
+    <div className="flex flex-col gap-2 mb-4">
+  
+  <input type="hidden" name="project_type" value={projectType} />
+  <div className="grid grid-cols-2 gap-2">
+    {[
+      { value: 'uxui', label: 'UX/UI Design' },
+      { value: 'web', label: lang === 'es' ? 'Desarrollo Web' : 'Web Development' },
+      { value: 'app', label: lang === 'es' ? 'Aplicación' : 'Application' },
+      { value: 'otro', label: lang === 'es' ? 'Otro' : 'Other' },
+    ].map((option) => (
+      <button
+        key={option.value}
+        type="button"
+        onClick={() => setProjectType(option.value)}
+        className={`rounded-xl border px-4 py-3 text-sm transition ${
+          projectType === option.value
+            ? 'border-white/40 bg-white/15 text-white font-medium'
+            : 'border-white/10 bg-white/[0.05] text-white/50 hover:bg-white/10 hover:text-white/70'
+        }`}
+      >
+        {option.label}
+      </button>
+    ))}
+  </div>
+</div>
+  </div>
+
+  <div className="flex flex-col gap-2 mb-6">
+    <label className="text-xs text-white/50 uppercase tracking-widest">
+      {lang === 'es' ? 'Mensaje' : 'Message'}
+    </label>
+    <textarea
+      name="message"
+      required
+      rows={4}
+      placeholder={lang === 'es' ? 'Contanos sobre tu proyecto...' : 'Tell us about your project...'}
+      className="rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-white placeholder-white/30 focus:outline-none focus:border-white/30 transition resize-none"
+    />
+  </div>
+
+  <button
+    type="submit"
+    className="w-full rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:scale-[1.02]"
+  >
+    {lang === 'es' ? 'Enviar mensaje' : 'Send message'}
+  </button>
+</form>
+  </div>
+</section>
       </main>
       <footer className="border-t border-white/10 px-6 py-8">
   <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-white/40 sm:flex-row">
     <span className="font-medium tracking-[0.2em] uppercase text-white/60">Polaris</span>
-    <span>{lang === 'es' ? '© 2026 Polaris Agency. Todos los derechos reservados.' : '© 2025 Polaris Agency. All rights reserved.'}</span>
-    <div className="flex gap-6">
-      <a href="#services" className="transition hover:text-white">
-        {lang === 'es' ? 'Servicios' : 'Services'}
-      </a>
-      <a href="#process" className="transition hover:text-white">
-      {lang === 'es' ? 'Proceso' : 'Process'}
-      </a>
-      <a href="#work" className="transition hover:text-white">
-      {lang === 'es' ? 'Proyectos' : 'Projects'}
-      </a>
-      <a href="#contact" className="transition hover:text-white">
-      {lang === 'es' ? 'Contacto' : 'Contact'}
-      </a>
-    </div>
+    <span>{lang === 'es' ? '© 2026 Polaris Studio. Todos los derechos reservados.' : '© 2025 Polaris Agency. All rights reserved.'}</span>
+    <div className="flex gap-6 items-center">
+  <a href="https://instagram.com/polaris.studio__" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white/70 transition">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+    </svg>
+  </a>
+  <a href="https://linkedin.com/company/polarisstuidio1" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white/70 transition">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  </a>
+</div>
   </div>
 </footer>
     </div>
