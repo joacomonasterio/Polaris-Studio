@@ -32,7 +32,7 @@ export default function App() {
     <div className="relative min-h-screen bg-neutral-950 text-white antialiased">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute left-[-10%] top-[-10%] h-96 w-96 rounded-full bg-fuchsia-500/20 blur-3xl" />
-        <div className="absolute right-[-10%] top-[10%] h-[28rem] w-[28rem] rounded-full bg-cyan-500/20 blur-3xl" />
+        <div className="absolute right-[-10%] top-[10%] h-[28rem] w-[28rem] rounded-full bg-cyan-500/10 blur-3xl" />
         <div className="absolute bottom-[-10%] left-[20%] h-80 w-80 rounded-full bg-violet-500/20 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_35%)]" />
       </div>
