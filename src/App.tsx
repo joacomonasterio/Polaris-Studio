@@ -5,7 +5,6 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import Process from './components/Process'
 import Projects from './components/Projects'
-import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -58,7 +57,7 @@ export default function App() {
 
         <Services lang={lang} />
         <Process lang={lang} />
-        <About lang={lang} />
+        {/* <About lang={lang} /> */}
         <Projects lang={lang} />
         <Contact lang={lang} />
       </main>
