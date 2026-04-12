@@ -35,20 +35,19 @@ export default function About({ lang }: Props) {
 
       <div className="mx-auto max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-8">
         {team.map((member) => (
-          <div
-            key={member.name}
-            className="animate-on-scroll flex flex-col items-center text-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8 gap-4"
-          >
-            <img
-              src={member.image}
-              alt={member.name}
-              className="h-24 w-24 rounded-full object-cover border border-white/10"
-              style={{ objectPosition: member.objectPosition }}
-            />
-            <div>
-              <h3 className="text-lg font-semibold text-white">{member.name}</h3>
-              <p className="text-sm text-white/50 mt-1">{member.role[lang]}</p>
-              <p className="text-xs text-white/30 mt-1">{member.study[lang]}</p>
+          <div key={member.name} className="animate-on-scroll">
+            <div className="flex flex-col items-center text-center rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-14 py-10 gap-6 transition-all duration-300 hover:scale-[1.06] hover:border-white/20 hover:bg-white/[0.06]">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="h-32 w-32 rounded-full object-cover border border-white/10"
+                style={{ objectPosition: member.objectPosition }}
+              />
+              <div>
+                <h3 className="text-lg font-semibold text-white">{member.name}</h3>
+                <p className="text-sm text-white/50 mt-1">{member.role[lang]}</p>
+                <p className="text-xs text-white/30 mt-1">{member.study[lang]}</p>
+              </div>
             </div>
           </div>
         ))}

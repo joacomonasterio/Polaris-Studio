@@ -51,6 +51,8 @@ export default function Projects({ lang }: Props) {
                 <img
                   src={project.image}
                   alt={project.name}
+                  width={800}
+                  height={500}
                   className="w-full max-h-[500px] object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                 />
               ) : (

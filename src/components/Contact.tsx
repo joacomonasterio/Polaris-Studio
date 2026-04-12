@@ -126,7 +126,7 @@ export default function Contact({ lang }: Props) {
 
           {formState === 'success' && (
             <p className="mt-4 text-center text-sm text-white/60">
-              {lang === 'es' ? 'Te respondemos en menos de 24 horas.' : "We'll get back to you in less than 24 hours."}
+              {lang === 'es' ? '¡Gracias! Nos ponemos en contacto a la brevedad.' : "Thanks! We'll be in touch soon."}
             </p>
           )}
           {formState === 'error' && (
