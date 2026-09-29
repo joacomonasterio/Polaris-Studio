@@ -23,7 +23,7 @@ export default function Projects({ lang }: Props) {
         {projects.map((project, i) => (
           <Reveal key={project.id}>
             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 py-10 items-center group hover:bg-white/[0.02] rounded-2xl px-4 transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-white/60">
-              <div className="flex justify-center">
+              <div className="flex items-center justify-center md:h-[440px]">
                 <img
                   src={project.cover.src}
                   alt={project.name}
