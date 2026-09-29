@@ -19,11 +19,12 @@ export default function Projects({ lang }: Props) {
         <p className="text-sm uppercase tracking-[0.24em] text-white/45">{t.eyebrow}</p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{t.heading}</h2>
       </div>
-      <div className="flex flex-col border-b border-white/10">
+      {/* auto-rows-fr: every row takes the height of the tallest one */}
+      <div className="grid auto-rows-fr border-b border-white/10">
         {projects.map((project, i) => (
-          <Reveal key={project.id}>
-            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 py-10 items-center group hover:bg-white/[0.02] rounded-2xl px-4 transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-white/60">
-              <div className="flex items-center justify-center md:h-[440px]">
+          <Reveal key={project.id} className="h-full">
+            <div className="relative grid h-full grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 py-10 items-center group hover:bg-white/[0.02] rounded-2xl px-4 transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-white/60">
+              <div className="flex h-[360px] items-center justify-center md:h-[440px]">
                 <img
                   src={project.cover.src}
                   alt={project.name}
@@ -31,7 +32,7 @@ export default function Projects({ lang }: Props) {
                   height={project.cover.height}
                   loading="lazy"
                   style={{ maxHeight: project.cover.maxHeight }}
-                  className="w-full max-h-[440px] object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 motion-reduce:group-hover:scale-100"
+                  className="w-full max-h-[360px] md:max-h-[440px] object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 motion-reduce:group-hover:scale-100"
                 />
               </div>
               <div className="flex flex-col gap-3">
