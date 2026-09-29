@@ -12,7 +12,12 @@ interface ServiceItem {
 
 interface ProjectCopy {
   type: string
+  /** Short summary shown in the projects list */
   description: string
+  /** Headline shown in the project modal */
+  title?: string
+  /** Long description shown in the project modal, one string per paragraph */
+  details?: string[]
 }
 
 interface ProjectTypeOption {
@@ -58,10 +63,17 @@ interface Dictionary {
   projects: {
     eyebrow: string
     heading: string
+    viewProject: string
+    close: string
+    previous: string
+    next: string
+    enlarge: string
+    visitSite: string
     items: {
-      fittrack: ProjectCopy
-      nextdrive: ProjectCopy
-      nubira: ProjectCopy
+      inne: ProjectCopy
+      apulmon: ProjectCopy
+      zenia: ProjectCopy
+      telriv: ProjectCopy
     }
   }
   contact: {
@@ -148,18 +160,54 @@ export const translations: Record<Lang, Dictionary> = {
     projects: {
       eyebrow: 'Proyectos',
       heading: 'Trabajo que habla por sí solo.',
+      viewProject: 'Ver proyecto',
+      close: 'Cerrar',
+      previous: 'Anterior',
+      next: 'Siguiente',
+      enlarge: 'Ampliar imagen',
+      visitSite: 'Visitar sitio',
       items: {
-        fittrack: {
-          type: 'App · Fitness & Training',
-          description: 'Aplicación de seguimiento de entrenamiento y progreso fitness.',
+        inne: {
+          type: 'Web · Pastelería',
+          description: 'Sitio web para una pastelería artesanal, con su catálogo de productos y la historia de la marca.',
+          title: 'Inné, pastelería artesanal gluten free',
+          details: [
+            'Diseñamos y desarrollamos un sitio web para Inné, una pastelería artesanal especializada en productos 100% libres de gluten.',
+            'El objetivo fue transmitir la calidez y el cuidado detrás de cada preparación, y a la vez presentar el catálogo de forma clara y accesible. Para eso trabajamos con una paleta de celestes y verde petróleo que aporta frescura y confianza, combinada con una tipografía serif elegante para los títulos y una sans serif limpia para facilitar la lectura.',
+            'El diseño es mobile first, con un hero que comunica de entrada la propuesta de valor y el diferencial gluten free, llamados a la acción bien jerarquizados ("Ver Catálogo" y "Nuestra Historia") y un carrusel de imágenes que pone los productos en primer plano.',
+            'El resultado es una web cercana y visualmente cuidada que refleja la identidad de la marca y facilita que los clientes conozcan y encarguen sus tortas, boxes y dulces personalizados.',
+          ],
         },
-        nextdrive: {
-          type: 'Plataforma · Renta de Autos',
-          description: 'Plataforma digital para la renta de vehículos con experiencia moderna.',
+        apulmon: {
+          type: 'Branding · Manual de marca',
+          description: 'Manual de marca para una app que conecta a donantes con comedores y hogares que necesitan ayuda.',
+          title: 'A pulmón, manual de marca',
+          details: [
+            'Desarrollamos el manual de marca de A pulmón, una aplicación que conecta de forma simple a quienes quieren colaborar con comedores y hogares que necesitan ayuda. Los usuarios vinculan su cuenta bancaria y donan el monto que elijan, y ese dinero se distribuye de manera equitativa entre las instituciones del sistema.',
+            'El sistema visual combina un verde oscuro profundo como color principal con un verde claro, blanco y toques de rosa y lila que suman calidez. En tipografía, Assistant para los títulos e Inter para los textos garantizan presencia y legibilidad. El manual también define el área de seguridad y el tamaño mínimo del logo, y establece una voz cercana, cálida y directa, con ejemplos de copy que muestran cómo habla la marca en cada interacción.',
+          ],
         },
-        nubira: {
-          type: 'Web · Estética',
-          description: 'Sitio web para estética profesional con foco en imagen de marca.',
+        zenia: {
+          type: 'Web · Tienda de tecnología',
+          description: 'Sitio web para un local de venta de iPhones, con su catálogo y precios siempre actualizados.',
+          title: 'Zenia Imports, desarrollo web',
+          details: [
+            'Diseñamos y desarrollamos el sitio web de Zenia, un local especializado en la venta de iPhones. El objetivo fue crear una vitrina online clara y confiable, donde los clientes pudieran explorar los modelos disponibles y consultar precios actualizados sin necesidad de escribir para preguntar.',
+            'Para eso trabajamos una interfaz limpia y minimalista, en sintonía con la estética de los productos que ofrece, con fichas que destacan la información clave de cada equipo (modelo, capacidad, color, estado y precio) y una navegación pensada para encontrar rápido lo que se busca.',
+            'El diseño es responsive, priorizando la experiencia en celulares, y cuenta con llamados a la acción directos para concretar la compra o hacer consultas por WhatsApp.',
+            'El resultado es un sitio que agiliza la venta, transmite profesionalismo y le da al negocio una presencia digital sólida.',
+          ],
+        },
+        telriv: {
+          type: 'Sistema · Gestión a medida',
+          description: 'Sistema de gestión a medida que centraliza las tareas, los pedidos y el seguimiento del equipo en un solo lugar.',
+          title: 'Desarrollo de sistema para Telriv',
+          details: [
+            'Diseñamos y desarrollamos un sistema a medida, pensado a partir de las necesidades reales de su negocio. Antes de empezar, entendimos cómo trabajaba su equipo, cuáles eran sus procesos diarios y qué tareas les consumían más tiempo del necesario.',
+            'A partir de ese relevamiento, construimos una herramienta que centraliza tareas, información y seguimiento en un solo lugar. Así, Telriv dejó atrás las planillas dispersas, los datos duplicados y la información que se perdía entre mensajes y correos. Hoy cada integrante del equipo sabe qué tiene que hacer y en qué estado está cada tarea, mientras que la dirección cuenta con datos actualizados para tomar decisiones con mayor seguridad.',
+            'El sistema permite optimizar tiempos, reducir errores y tener una visión clara de lo que sucede en el día a día. Además, fue diseñado para ser intuitivo y fácil de usar, lo que facilitó una adopción rápida por parte del equipo, y está preparado para crecer junto con la empresa, incorporando nuevas funcionalidades a medida que surjan nuevas necesidades.',
+            'El resultado es un equipo más organizado, menos tiempo dedicado a tareas operativas y más espacio para enfocarse en lo que realmente importa: hacer crecer el negocio.',
+          ],
         },
       },
     },
@@ -250,18 +298,54 @@ export const translations: Record<Lang, Dictionary> = {
     projects: {
       eyebrow: 'Projects',
       heading: 'Work that speaks for itself.',
+      viewProject: 'View project',
+      close: 'Close',
+      previous: 'Previous',
+      next: 'Next',
+      enlarge: 'Enlarge image',
+      visitSite: 'Visit site',
       items: {
-        fittrack: {
-          type: 'App · Fitness & Training',
-          description: 'Fitness tracking app for workouts and progress monitoring.',
+        inne: {
+          type: 'Web · Patisserie',
+          description: 'Website for an artisan patisserie, featuring its product catalog and the story behind the brand.',
+          title: 'Inné, gluten-free artisan patisserie',
+          details: [
+            'We designed and built a website for Inné, an artisan patisserie specializing in 100% gluten-free products.',
+            'The goal was to convey the warmth and care behind every recipe while presenting the catalog in a clear, accessible way. To do so, we worked with a palette of light blues and petrol green that feels fresh and trustworthy, paired with an elegant serif typeface for headings and a clean sans serif for easy reading.',
+            'The design is mobile first, with a hero that communicates the value proposition and the gluten-free difference right away, well-prioritized calls to action ("See Catalog" and "Our Story") and an image carousel that puts the products front and center.',
+            'The result is a warm, carefully crafted website that reflects the brand’s identity and makes it easy for customers to discover and order their custom cakes, boxes and sweets.',
+          ],
         },
-        nextdrive: {
-          type: 'Platform · Car Rental',
-          description: 'Digital platform for vehicle rental with a modern experience.',
+        apulmon: {
+          type: 'Branding · Brand guidelines',
+          description: 'Brand guidelines for an app that connects donors with soup kitchens and shelters in need.',
+          title: 'A pulmón, brand guidelines',
+          details: [
+            'We created the brand guidelines for A pulmón, an app that makes it simple for people who want to help to support soup kitchens and shelters in need. Users link their bank account and donate the amount they choose, and the money is distributed evenly among the institutions in the system.',
+            'The visual system pairs a deep dark green as the main color with light green, white and touches of pink and lilac that add warmth. For typography, Assistant for headings and Inter for body text ensure presence and legibility. The guidelines also define the logo’s clear space and minimum size, and set a close, warm and direct voice, with copy examples showing how the brand speaks in every interaction.',
+          ],
         },
-        nubira: {
-          type: 'Web · Beauty Salon',
-          description: 'Website for a professional beauty salon focused on brand image.',
+        zenia: {
+          type: 'Web · Tech store',
+          description: 'Website for an iPhone store, with its catalog and always up-to-date prices.',
+          title: 'Zenia Imports, web development',
+          details: [
+            'We designed and built the website for Zenia, a store specializing in selling iPhones. The goal was to create a clear, trustworthy online storefront where customers could browse the available models and check up-to-date prices without having to message to ask.',
+            'To do so, we designed a clean, minimalist interface in tune with the look of the products it sells, with product cards that highlight each device’s key details (model, storage, color, condition and price) and navigation designed to find what you’re looking for quickly.',
+            'The design is responsive, prioritizing the mobile experience, with direct calls to action to complete a purchase or ask questions via WhatsApp.',
+            'The result is a site that speeds up sales, conveys professionalism and gives the business a solid digital presence.',
+          ],
+        },
+        telriv: {
+          type: 'System · Custom management',
+          description: 'Custom management system that brings the team’s tasks, orders and follow-up together in one place.',
+          title: 'A custom system for Telriv',
+          details: [
+            'We designed and built a custom system based on the real needs of their business. Before starting, we took the time to understand how their team worked, what their daily processes were and which tasks were taking up more time than necessary.',
+            'Based on that research, we built a tool that brings tasks, information and follow-up together in one place. Telriv left behind scattered spreadsheets, duplicated data and information that got lost between messages and emails. Today every team member knows what they need to do and the status of each task, while management has up-to-date data to make decisions with more confidence.',
+            'The system helps save time, reduce errors and get a clear view of what happens day to day. It was also designed to be intuitive and easy to use, which made for quick adoption by the team, and it is ready to grow with the company, adding new features as new needs arise.',
+            'The result is a more organized team, less time spent on operational tasks and more room to focus on what really matters: growing the business.',
+          ],
         },
       },
     },
