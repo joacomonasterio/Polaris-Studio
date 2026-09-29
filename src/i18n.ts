@@ -14,8 +14,6 @@ interface ProjectCopy {
   type: string
   /** Short summary shown in the projects list */
   description: string
-  /** Headline shown in the project modal */
-  title?: string
   /** Long description shown in the project modal, one string per paragraph */
   details?: string[]
 }
@@ -170,7 +168,6 @@ export const translations: Record<Lang, Dictionary> = {
         inne: {
           type: 'Web · Pastelería',
           description: 'Sitio web para una pastelería artesanal, con su catálogo de productos y la historia de la marca.',
-          title: 'Inné, pastelería artesanal gluten free',
           details: [
             'Diseñamos y desarrollamos un sitio web para Inné, una pastelería artesanal especializada en productos 100% libres de gluten.',
             'El objetivo fue transmitir la calidez y el cuidado detrás de cada preparación, y a la vez presentar el catálogo de forma clara y accesible. Para eso trabajamos con una paleta de celestes y verde petróleo que aporta frescura y confianza, combinada con una tipografía serif elegante para los títulos y una sans serif limpia para facilitar la lectura.',
@@ -179,9 +176,8 @@ export const translations: Record<Lang, Dictionary> = {
           ],
         },
         apulmon: {
-          type: 'Branding · Manual de marca',
+          type: 'Desarrollo de App · Branding',
           description: 'Manual de marca para una app que conecta a donantes con comedores y hogares que necesitan ayuda.',
-          title: 'A pulmón, manual de marca',
           details: [
             'Desarrollamos el manual de marca de A pulmón, una aplicación que conecta de forma simple a quienes quieren colaborar con comedores y hogares que necesitan ayuda. Los usuarios vinculan su cuenta bancaria y donan el monto que elijan, y ese dinero se distribuye de manera equitativa entre las instituciones del sistema.',
             'El sistema visual combina un verde oscuro profundo como color principal con un verde claro, blanco y toques de rosa y lila que suman calidez. En tipografía, Assistant para los títulos e Inter para los textos garantizan presencia y legibilidad. El manual también define el área de seguridad y el tamaño mínimo del logo, y establece una voz cercana, cálida y directa, con ejemplos de copy que muestran cómo habla la marca en cada interacción.',
@@ -190,7 +186,6 @@ export const translations: Record<Lang, Dictionary> = {
         zenia: {
           type: 'Web · Tienda de tecnología',
           description: 'Sitio web para un local de venta de iPhones, con su catálogo y precios siempre actualizados.',
-          title: 'Zenia Imports, desarrollo web',
           details: [
             'Diseñamos y desarrollamos el sitio web de Zenia, un local especializado en la venta de iPhones. El objetivo fue crear una vitrina online clara y confiable, donde los clientes pudieran explorar los modelos disponibles y consultar precios actualizados sin necesidad de escribir para preguntar.',
             'Para eso trabajamos una interfaz limpia y minimalista, en sintonía con la estética de los productos que ofrece, con fichas que destacan la información clave de cada equipo (modelo, capacidad, color, estado y precio) y una navegación pensada para encontrar rápido lo que se busca.',
@@ -201,7 +196,6 @@ export const translations: Record<Lang, Dictionary> = {
         telriv: {
           type: 'Sistema · Gestión a medida',
           description: 'Sistema de gestión a medida que centraliza las tareas, los pedidos y el seguimiento del equipo en un solo lugar.',
-          title: 'Desarrollo de sistema para Telriv',
           details: [
             'Diseñamos y desarrollamos un sistema a medida, pensado a partir de las necesidades reales de su negocio. Antes de empezar, entendimos cómo trabajaba su equipo, cuáles eran sus procesos diarios y qué tareas les consumían más tiempo del necesario.',
             'A partir de ese relevamiento, construimos una herramienta que centraliza tareas, información y seguimiento en un solo lugar. Así, Telriv dejó atrás las planillas dispersas, los datos duplicados y la información que se perdía entre mensajes y correos. Hoy cada integrante del equipo sabe qué tiene que hacer y en qué estado está cada tarea, mientras que la dirección cuenta con datos actualizados para tomar decisiones con mayor seguridad.',
@@ -308,7 +302,6 @@ export const translations: Record<Lang, Dictionary> = {
         inne: {
           type: 'Web · Patisserie',
           description: 'Website for an artisan patisserie, featuring its product catalog and the story behind the brand.',
-          title: 'Inné, gluten-free artisan patisserie',
           details: [
             'We designed and built a website for Inné, an artisan patisserie specializing in 100% gluten-free products.',
             'The goal was to convey the warmth and care behind every recipe while presenting the catalog in a clear, accessible way. To do so, we worked with a palette of light blues and petrol green that feels fresh and trustworthy, paired with an elegant serif typeface for headings and a clean sans serif for easy reading.',
@@ -317,9 +310,8 @@ export const translations: Record<Lang, Dictionary> = {
           ],
         },
         apulmon: {
-          type: 'Branding · Brand guidelines',
+          type: 'App Development · Branding',
           description: 'Brand guidelines for an app that connects donors with soup kitchens and shelters in need.',
-          title: 'A pulmón, brand guidelines',
           details: [
             'We created the brand guidelines for A pulmón, an app that makes it simple for people who want to help to support soup kitchens and shelters in need. Users link their bank account and donate the amount they choose, and the money is distributed evenly among the institutions in the system.',
             'The visual system pairs a deep dark green as the main color with light green, white and touches of pink and lilac that add warmth. For typography, Assistant for headings and Inter for body text ensure presence and legibility. The guidelines also define the logo’s clear space and minimum size, and set a close, warm and direct voice, with copy examples showing how the brand speaks in every interaction.',
@@ -328,7 +320,6 @@ export const translations: Record<Lang, Dictionary> = {
         zenia: {
           type: 'Web · Tech store',
           description: 'Website for an iPhone store, with its catalog and always up-to-date prices.',
-          title: 'Zenia Imports, web development',
           details: [
             'We designed and built the website for Zenia, a store specializing in selling iPhones. The goal was to create a clear, trustworthy online storefront where customers could browse the available models and check up-to-date prices without having to message to ask.',
             'To do so, we designed a clean, minimalist interface in tune with the look of the products it sells, with product cards that highlight each device’s key details (model, storage, color, condition and price) and navigation designed to find what you’re looking for quickly.',
@@ -339,7 +330,6 @@ export const translations: Record<Lang, Dictionary> = {
         telriv: {
           type: 'System · Custom management',
           description: 'Custom management system that brings the team’s tasks, orders and follow-up together in one place.',
-          title: 'A custom system for Telriv',
           details: [
             'We designed and built a custom system based on the real needs of their business. Before starting, we took the time to understand how their team worked, what their daily processes were and which tasks were taking up more time than necessary.',
             'Based on that research, we built a tool that brings tasks, information and follow-up together in one place. Telriv left behind scattered spreadsheets, duplicated data and information that got lost between messages and emails. Today every team member knows what they need to do and the status of each task, while management has up-to-date data to make decisions with more confidence.',

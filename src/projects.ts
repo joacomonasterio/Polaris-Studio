@@ -22,7 +22,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'inne',
-    name: 'Inné Pâtisserie',
+    name: 'Inné Patisserie',
     cover: { src: '/inne.webp', width: 483, height: 940 },
     media: [
       { type: 'image', src: '/inne.webp', width: 483, height: 940 },
@@ -47,6 +47,15 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'telriv',
+    name: 'Telriv',
+    cover: { src: '/telriv.webp', width: 975, height: 567, maxHeight: 260 },
+    media: [
+      { type: 'image', src: '/telriv.webp', width: 975, height: 567, alt: 'Sistema de Telriv: dashboard' },
+      { type: 'video', src: '/telriv-video.mp4', width: 704, height: 480, poster: '/telriv-video-poster.webp' },
+    ],
+  },
+  {
     id: 'zenia',
     name: 'Zenia Imports',
     cover: { src: '/zenia.webp', width: 483, height: 939 },
@@ -54,15 +63,6 @@ export const projects: Project[] = [
       { type: 'image', src: '/zenia.webp', width: 483, height: 939, alt: 'Zenia Imports: inicio' },
       { type: 'image', src: '/zenia-2.webp', width: 483, height: 939, alt: 'Zenia Imports: catálogo' },
       { type: 'image', src: '/zenia-3.webp', width: 490, height: 953, alt: 'Zenia Imports: dónde encontrarnos' },
-    ],
-  },
-  {
-    id: 'telriv',
-    name: 'Telriv',
-    cover: { src: '/telriv.webp', width: 975, height: 567, maxHeight: 260 },
-    media: [
-      { type: 'image', src: '/telriv.webp', width: 975, height: 567, alt: 'Sistema de Telriv: dashboard' },
-      { type: 'video', src: '/telriv-video.mp4', width: 704, height: 480, poster: '/telriv-video-poster.webp' },
     ],
   },
 ]

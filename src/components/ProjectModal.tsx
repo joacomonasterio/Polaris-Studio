@@ -58,8 +58,7 @@ export default function ProjectModal({ project, lang, onClose }: Props) {
 
         <div className="overflow-y-auto">
           <div className="px-6 pt-6 sm:px-8 sm:pt-8">
-            {copy.title && <h4 className="text-2xl font-semibold tracking-tight sm:text-3xl">{copy.title}</h4>}
-            <div className={`space-y-4 text-sm leading-7 text-white/65 sm:text-base ${copy.title ? 'mt-4' : ''}`}>
+            <div className="space-y-4 text-sm leading-7 text-white/65 sm:text-base">
               {(copy.details ?? [copy.description]).map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
