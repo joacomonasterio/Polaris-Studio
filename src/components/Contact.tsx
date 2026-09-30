@@ -34,7 +34,7 @@ export default function Contact({ lang }: Props) {
   }
 
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+    <section id="contact" className="mx-auto max-w-7xl px-6 py-16 md:py-20 lg:px-8">
       <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-12">
         <div className="mx-auto max-w-2xl text-center mb-10">
           <p className="text-sm uppercase tracking-[0.24em] text-white/45">{t.eyebrow}</p>
@@ -83,11 +83,11 @@ export default function Contact({ lang }: Props) {
 
           <div className="flex flex-col gap-2 mb-4 w-full">
             <span className="text-xs text-white/50 uppercase tracking-widest">{t.projectTypeLabel}</span>
-            <div className="grid grid-cols-2 gap-2" role="radiogroup" aria-label={t.projectTypeLabel}>
+            <div className="grid grid-cols-2 auto-rows-fr gap-x-4 gap-y-2" role="radiogroup" aria-label={t.projectTypeLabel}>
               {t.projectTypes.map((option) => (
                 <label
                   key={option.value}
-                  className={`cursor-pointer text-center rounded-xl border px-4 py-3 text-sm transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-white/60 ${
+                  className={`flex cursor-pointer items-center justify-center text-center rounded-xl border px-4 py-3 text-sm transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-white/60 ${
                     projectType === option.value
                       ? 'border-white/40 bg-white/15 text-white font-medium'
                       : 'border-white/10 bg-white/[0.05] text-white/50 hover:bg-white/10 hover:text-white/70'

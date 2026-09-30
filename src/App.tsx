@@ -6,13 +6,10 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Reveal from './components/Reveal'
 import { useLang } from './hooks/useLang'
-import { translations } from './i18n'
 
 export default function App() {
   const [lang, setLang] = useLang()
-  const t = translations[lang]
 
   return (
     <div className="relative min-h-screen bg-brand-bg text-white antialiased">
@@ -27,18 +24,6 @@ export default function App() {
 
       <main className="relative">
         <Hero lang={lang} />
-
-        <section className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-          <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 md:grid-cols-4">
-            {t.highlights.map((item, index) => (
-              <Reveal key={index}>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-sm text-white/70 text-center">
-                  {item}
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
 
         <Services lang={lang} />
         <Process lang={lang} />

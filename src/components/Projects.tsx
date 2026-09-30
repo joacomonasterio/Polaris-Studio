@@ -14,8 +14,8 @@ export default function Projects({ lang }: Props) {
   const [openProject, setOpenProject] = useState<Project | null>(null)
 
   return (
-    <section id="work" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-      <div className="mb-12">
+    <section id="work" className="mx-auto max-w-7xl px-6 py-16 md:py-20 lg:px-8">
+      <div className="mx-auto mb-12 max-w-2xl text-center">
         <p className="text-sm uppercase tracking-[0.24em] text-white/45">{t.eyebrow}</p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{t.heading}</h2>
       </div>

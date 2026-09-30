@@ -24,6 +24,10 @@ interface ProjectTypeOption {
 }
 
 interface Dictionary {
+  meta: {
+    title: string
+    description: string
+  }
   nav: {
     services: string
     process: string
@@ -48,7 +52,7 @@ interface Dictionary {
     eyebrow: string
     heading: string
     description: string
-    steps: string[]
+    steps: { title: string; description: string }[]
   }
   team: {
     eyebrow: string
@@ -99,6 +103,11 @@ interface Dictionary {
 
 export const translations: Record<Lang, Dictionary> = {
   es: {
+    meta: {
+      title: 'Polaris Studio — Diseño UX/UI y Desarrollo Web',
+      description:
+        'Agencia de diseño UX/UI y desarrollo web. Diseñamos y construimos productos digitales modernos, rápidos y listos para crecer.',
+    },
     nav: {
       services: 'Servicios',
       process: 'Proceso',
@@ -141,10 +150,26 @@ export const translations: Record<Lang, Dictionary> = {
       description:
         'Trabajamos con una lógica simple: entender el objetivo, diseñar con intención y construir una experiencia sólida, rápida y lista para destacar.',
       steps: [
-        'Descubrimiento y estrategia',
-        'Wireframes y diseño visual',
-        'Desarrollo y optimización',
-        'Entrega, medición y mejora',
+        {
+          title: 'Descubrimiento y estrategia',
+          description:
+            'Nos reunimos para entender tu negocio, tus objetivos y a quién le hablás. Con eso definimos el alcance, las prioridades y un plan de trabajo claro.',
+        },
+        {
+          title: 'Wireframes y diseño visual',
+          description:
+            'Armamos la estructura de cada pantalla y después el diseño final con la identidad de tu marca. Lo revisamos juntos antes de pasar a desarrollo.',
+        },
+        {
+          title: 'Desarrollo y optimización',
+          description:
+            'Construimos el producto con tecnologías modernas, cuidando que sea rápido y que funcione bien en cualquier dispositivo.',
+        },
+        {
+          title: 'Entrega, medición y mejora',
+          description:
+            'Publicamos el proyecto, te acompañamos en el lanzamiento y medimos cómo funciona para seguir mejorándolo.',
+        },
       ],
     },
     team: {
@@ -215,7 +240,7 @@ export const translations: Record<Lang, Dictionary> = {
       emailPlaceholder: 'tu@email.com',
       projectTypeLabel: 'Tipo de proyecto',
       projectTypes: [
-        { value: 'uxui', label: 'UX/UI Design' },
+        { value: 'uxui', label: 'Diseño UX/UI' },
         { value: 'web', label: 'Desarrollo Web' },
         { value: 'app', label: 'Aplicación' },
         { value: 'otro', label: 'Otro' },
@@ -233,6 +258,11 @@ export const translations: Record<Lang, Dictionary> = {
     },
   },
   en: {
+    meta: {
+      title: 'Polaris Studio — UX/UI Design and Web Development',
+      description:
+        'UX/UI design and web development agency. We design and build modern, fast digital products that are ready to grow.',
+    },
     nav: {
       services: 'Services',
       process: 'Process',
@@ -275,10 +305,26 @@ export const translations: Record<Lang, Dictionary> = {
       description:
         'We work with a simple logic: understand the goal, design with intention and build a solid, fast experience ready to stand out.',
       steps: [
-        'Discovery & strategy',
-        'Wireframes & visual design',
-        'Development & optimization',
-        'Delivery, measurement & improvement',
+        {
+          title: 'Discovery & strategy',
+          description:
+            'We meet to understand your business, your goals and who you are talking to. From there we define the scope, priorities and a clear work plan.',
+        },
+        {
+          title: 'Wireframes & visual design',
+          description:
+            'We map out the structure of each screen and then the final design with your brand identity. We review it together before moving on to development.',
+        },
+        {
+          title: 'Development & optimization',
+          description:
+            'We build the product with modern technologies, making sure it is fast and works well on any device.',
+        },
+        {
+          title: 'Delivery, measurement & improvement',
+          description:
+            'We launch the project, support you through the release and measure how it performs so we can keep improving it.',
+        },
       ],
     },
     team: {

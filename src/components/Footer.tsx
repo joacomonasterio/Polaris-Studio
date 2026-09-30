@@ -12,8 +12,14 @@ export default function Footer({ lang }: Props) {
     <footer className="border-t border-white/10 px-6 py-8">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-white/40 sm:flex-row">
         <span className="font-medium tracking-[0.2em] uppercase text-white/60">Polaris</span>
-        <span>{t.rights(new Date().getFullYear())}</span>
+        <span className="text-center">{t.rights(new Date().getFullYear())}</span>
         <div className="flex gap-6 items-center">
+          <a href="mailto:polaris.studio3031@gmail.com" aria-label="Email" className="text-white/40 hover:text-white/70 transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="3" ry="3"/>
+              <path d="M3 7l9 6 9-6"/>
+            </svg>
+          </a>
           <a href="https://instagram.com/polaris.studio__" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/40 hover:text-white/70 transition">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>

@@ -26,7 +26,8 @@ export default function Reveal({ children, className = '', delay = 0 }: Props) {
           observer.disconnect()
         }
       },
-      { threshold: 0.1 },
+      // Trigger slightly before the element scrolls in, so fast scrolling doesn't reveal empty space
+      { rootMargin: '0px 0px 120px 0px' },
     )
     observer.observe(el)
     return () => observer.disconnect()
