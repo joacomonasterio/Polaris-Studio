@@ -5,6 +5,7 @@ import Process from './components/Process'
 import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
+import CodeRain from './components/CodeRain'
 import Footer from './components/Footer'
 import { useLang } from './hooks/useLang'
 
@@ -12,7 +13,8 @@ export default function App() {
   const [lang, setLang] = useLang()
 
   return (
-    <div className="relative min-h-screen bg-brand-bg text-white antialiased">
+    <div className="relative isolate min-h-screen bg-brand-bg text-white antialiased">
+      <CodeRain />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute left-[-10%] top-[-10%] h-96 w-96 rounded-full bg-fuchsia-500/20 blur-3xl" />
         <div className="absolute right-[-10%] top-[10%] h-[28rem] w-[28rem] rounded-full bg-cyan-500/10 blur-3xl" />

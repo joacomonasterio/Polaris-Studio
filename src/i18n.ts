@@ -40,6 +40,8 @@ interface Dictionary {
     title: string
     description: string
     cta: string
+    snippets: string[][]
+    terminal: string[]
   }
   highlights: string[]
   services: {
@@ -120,6 +122,26 @@ export const translations: Record<Lang, Dictionary> = {
       title: 'Somos Polaris.',
       description: 'Agencia de desarrollo de software que diseña y construye productos digitales.',
       cta: 'Comenzar proyecto',
+      snippets: [
+        ['const proyecto = {', '  idea: "tuya",', '  equipo: "Polaris",', '  entrega: "lista para crecer",', '}'],
+        ['// Diseño que convierte', 'const visitante = await llega()', 'if (visitante.quiere) contactar()'],
+        ['brief → diseño → desarrollo', '  .then(lanzar)', '  .then(crecer)'],
+        ['const respuesta = "menos de 24 hs"', 'await hablamos(tuIdea)'],
+        ['<Web rapida responsive seo />'],
+        ['ux.testear(usuario) // iteramos', '// hasta que se sienta natural'],
+        ['const web = {', '  mobile: "primero",', '  accesible: true,', '}'],
+        ['export const marca = {', '  identidad: "clara",', '  presencia: "premium",', '}'],
+        ['npm run lanzar', '> tu producto, online'],
+        ['SELECT ideas FROM tu_negocio', 'WHERE necesita = "crecer"'],
+        ['if (tuIdea) Polaris.empezar()'],
+        ['--color-marca: var(--tu-estilo);', 'filter: hacer-memorable;'],
+      ],
+      terminal: [
+        '$ polaris empezar --proyecto nuevo',
+        '> entendiendo tu negocio...',
+        '> diseñando la experiencia...',
+        '> listo para lanzar',
+      ],
     },
     highlights: ['Diseño estratégico', 'Desarrollo moderno', 'Responsive', 'Optimización visual'],
     services: {
@@ -275,6 +297,26 @@ export const translations: Record<Lang, Dictionary> = {
       title: 'We are Polaris.',
       description: 'Software agency that designs and builds digital products.',
       cta: 'Start a project',
+      snippets: [
+        ['const project = {', '  idea: "yours",', '  team: "Polaris",', '  delivery: "ready to grow",', '}'],
+        ['// Design that converts', 'const visitor = await arrives()', 'if (visitor.wantsIn) contact()'],
+        ['brief → design → build', '  .then(launch)', '  .then(grow)'],
+        ['const reply = "under 24 hours"', 'await talk(yourIdea)'],
+        ['<Web fast responsive seo />'],
+        ['ux.test(user) // we iterate', '// until it feels natural'],
+        ['const web = {', '  mobile: "first",', '  accessible: true,', '}'],
+        ['export const brand = {', '  identity: "clear",', '  presence: "premium",', '}'],
+        ['npm run launch', '> your product, online'],
+        ['SELECT ideas FROM your_business', 'WHERE needs = "to grow"'],
+        ['if (yourIdea) Polaris.start()'],
+        ['--brand-color: var(--your-style);', 'filter: make-memorable;'],
+      ],
+      terminal: [
+        '$ polaris start --new-project',
+        '> understanding your business...',
+        '> designing the experience...',
+        '> ready to launch',
+      ],
     },
     highlights: ['Strategic design', 'Modern development', 'Responsive', 'Visual optimization'],
     services: {

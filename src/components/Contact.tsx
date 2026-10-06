@@ -35,7 +35,7 @@ export default function Contact({ lang }: Props) {
 
   return (
     <section id="contact" className="mx-auto max-w-7xl px-6 py-16 md:py-20 lg:px-8">
-      <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-12">
+      <div className="rounded-[2rem] border border-white/10 bg-[#080910] p-8 md:p-12">
         <div className="mx-auto max-w-2xl text-center mb-10">
           <p className="text-sm uppercase tracking-[0.24em] text-white/45">{t.eyebrow}</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{t.heading}</h2>

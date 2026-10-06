@@ -59,7 +59,7 @@ export default function Header({ lang, setLang }: Props) {
       <header
         ref={headerRef}
         className={`sticky top-0 z-50 border-b border-white/10 transition-all duration-300 ${
-          scrolled || menuOpen ? 'bg-brand-bg/95 backdrop-blur-xl' : 'bg-transparent border-transparent'
+          scrolled || menuOpen ? 'bg-brand-bg/95 backdrop-blur-xl' : 'bg-brand-bg/75 backdrop-blur-md border-transparent'
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
